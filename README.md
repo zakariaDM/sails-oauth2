@@ -10,7 +10,7 @@ a [Sails](http://sailsjs.org) application
 
 1. In terminal, run `sails lift`
 
-2. In your browser, go to `http://localhost:1336/users`
+2. In your browser, go to `http://localhost:1337/users`
 
 3. If you see the message `Unauthorized`, then you have succeeded.
 
@@ -31,7 +31,7 @@ a [Sails](http://sailsjs.org) application
         1. Security Config (Step 5) contains valid GMail credentials
         2. Connections Config (Step 9) contains valid Mongo server details
 
-    2. Using Postman, post to `http://localhost:1336/clients/register` with `x-www-form-urlencoded` key:value pairs:
+    2. Using Postman, post to `http://localhost:1337/clients/register` with `x-www-form-urlencoded` key:value pairs:
 
         ```shell
         email : <your email>
@@ -43,7 +43,7 @@ a [Sails](http://sailsjs.org) application
 
         ```json
         {
-            "url": "http://localhost:1336/clients/verify/<your email>?code=gqjH6igH6Z89ROEoVRFmEiVYuEfEZ1kQ"
+            "url": "http://localhost:1337/clients/verify/<your email>?code=gqjH6igH6Z89ROEoVRFmEiVYuEfEZ1kQ"
         }
         ```
 
@@ -69,7 +69,7 @@ a [Sails](http://sailsjs.org) application
 
 3. Register a User
 
-    1. Using Postman, post to `http://localhost:1336/users/register` with `x-www-form-urlencoded` key:value pairs:
+    1. Using Postman, post to `http://localhost:1337/users/register` with `x-www-form-urlencoded` key:value pairs:
 
         ```shell
         username : <your username>
@@ -83,7 +83,7 @@ a [Sails](http://sailsjs.org) application
 
         ```json
         {
-            "url": "http://localhost:1336/users/verify/<your email>?code=Y087VfF3bbHmNrQaRsAfOB8srfNB0gDW"
+            "url": "http://localhost:1337/users/verify/<your email>?code=Y087VfF3bbHmNrQaRsAfOB8srfNB0gDW"
         }
         ```
 
@@ -111,7 +111,7 @@ a [Sails](http://sailsjs.org) application
 
     1. In order to request a token, you require a registered client and a registered user (see above).
 
-    2. Using Postman, post to `http://localhost:1336/oauth/token` with `x-www-form-urlencoded` key:value pairs:
+    2. Using Postman, post to `http://localhost:1337/oauth/token` with `x-www-form-urlencoded` key:value pairs:
 
         ```shell
         grant_type : password
@@ -135,7 +135,7 @@ a [Sails](http://sailsjs.org) application
 
 5. Request Resource with Token
 
-    1. Using Postman, request with GET `http://localhost:1336/users/current` with custom authorization header key:value pair:
+    1. Using Postman, request with GET `http://localhost:1337/users/current` with custom authorization header key:value pair:
 
         ```shell
         Authorization : Bearer <received access token>
